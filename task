@@ -1,0 +1,193 @@
+from random import randint
+
+import numpy as np
+import random
+
+print('------1------')
+array_1 = np.array([12.23, 13.32, 100, 36.32])
+print(array_1)
+
+print('------2------')
+print(np.arange(12,38))
+
+print('------3------')
+array_7 = np.zeros(7)
+array_7[5:6] = 11
+print(array_7)
+
+print('------4------')
+x = np.arange(12,21)
+y = x.reshape(3,3)
+print(y)
+
+print('------5------')
+x = np.arange(12,38)
+print(np.flip(x))
+print('------6------')
+f = np.array([1, 2, 3, 4],dtype=float)
+print(f)
+print('------7------')
+t = np.ones((5,5))
+t[1:-1,1:-1] = 0
+print(t)
+print('------8------')
+i1 = np.ones((3,3))
+i0 = np.zeros((5,5))
+i0[1:-1,1:-1] = i1
+print(i0)
+print('------9------')
+mat_st = np.full((8,8),[0])
+mat7 = np.eye(8,k=7)
+mat6 = np.eye(8,k=-1)
+mat5 = np.eye(8,k=5)
+mat4 = np.eye(8,k=-5)
+mat3 = np.eye(8,k=3)
+mat2 = np.eye(8,k=-7)
+mat1 = np.eye(8,k=1)
+mat0 = np.eye(8,k=0)
+mat = np.eye(8,k=-3)
+
+result = mat_st + mat7 + mat6 + mat5 + mat4 + mat3 + mat2 + mat1 + mat
+
+print(result)
+
+print('------10------')
+nach = np.array([10, 20, 30])
+tut = []
+for jl in range(40,100,10):
+    tut.append(jl)
+tut1 = np.array(tut)
+tp = np.append(nach,tut1)
+print(tp)
+
+print('------11------')
+
+cels = np.array([-17.78,  -9.44,   5.12,  -1.67,  27.73,   0.0 ], dtype = 'float16')
+far1 = (cels * 1.8 +32)
+print(far1)
+
+print('------12------')
+
+mas = np.array([1, 2, 3])
+print(np.size(mas))
+
+print('------13------')
+
+Array1 = np.array([10, 20, 30, 40, 50])
+Array2 = np.array([10, 40])
+Array3 = np.full((np.size(Array1)),Array2[0])
+Array4 = np.full((np.size(Array1)),Array2[1])
+sup1 = (Array1 == Array3)
+sup2 = (Array1 == Array4)
+ans = sup1 + sup2
+print(ans)
+
+print('------14------')
+
+Arr1 = [ 10, 20, 30, 40, 50]
+Arr2 = [10, 25, 50]
+print(np.intersect1d(Arr1,Arr2))
+
+print('------15------')
+
+Arra1 = [ 0, 10, 20, 40, 60, 80]
+Arra2 = [10, 30, 40, 50, 70, 90]
+
+print(np.setdiff1d(Arra1,Arra2))
+
+print('------16------')
+
+Arra11 = [ 0, 10, 20, 40, 60, 80]
+Arra22 = [10, 30, 40, 50, 70]
+supp1 = Arra11 + Arra22
+print(np.unique(supp1))
+
+print('------17------')
+
+mass = [1, 2, 3, 4]
+print(np.tile(mass,2))
+print(np.tile(mass,3))
+
+print('------18------')
+
+arr1 = np.array([1, 5])
+arr2 = np.array([3, 5])
+
+
+print(arr1 > arr2)
+
+print(arr1 >= arr2)
+
+print(arr1 < arr2)
+
+print(arr1 <= arr2)
+
+print('------19------')
+
+print(np.full((2),[0],dtype='float'))
+
+print(np.full((2),[0],dtype='int'))
+
+print(np.full((2),[1],dtype='float'))
+
+print(np.full((2),[1],dtype='int'))
+
+print('------20------')
+
+g = np.array([[2,4,6],[6,8,10]], dtype='int32')
+print(g)
+g1 = np.array(g,dtype='float64')
+print(g1)
+
+print('------21------')
+
+massive = np.full((7,3),[1,2,3])
+print(massive)
+
+
+print('------22------')
+
+gg = np.array([[2,4,6],[6,8,10]])
+print((np.ndarray.flatten(gg))[3])
+
+print('------23------')
+
+rar = np.array([[0, 10, 20],[30, 40 ,0]])
+print(len(np.flatnonzero(rar)))
+
+print('------24------')
+ror1 = np.full((5,5),[0])
+ror = np.full((5,5),[range(0,5)])
+print(ror1 + ror)
+
+print('------25------')
+
+print(np.ones((3,3,3)))
+
+print('------26------')
+
+tar = np.array([[1,2,3],[4,5,6],[7,8,9]])
+
+print(np.delete(tar,np.s_[:1],1))
+
+print('------27------')
+
+print(np.random.randint(10, size=(np.random.choice(9),3)))
+
+print('------28------')
+#пустой массив добавить 2 строки [[1,2,3],[4,5,6]]
+
+ioi = np.array([])
+tpt = np.array([1,2,3])
+tpt1 = np.array([4,5,6])
+trt = np.vstack((ioi,tpt,tpt1))
+print(trt)
+print('------29------')
+
+afaf = np.arange(0,16).reshape(4,4)
+print(afaf[1:-2])
+
+print('------30------')
+
+amogus = np.arange(0,36).reshape(6,6)
+print(np.array([[amogus[2,0],amogus[2,2],amogus[2,4]],[amogus[4,0],amogus[4,2],amogus[4,4]]]))
